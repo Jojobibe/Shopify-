@@ -1,0 +1,138 @@
+{{ 'customstyle.css' | asset_url | stylesheet_tag }}
+
+<div class="grid__fb grid__main">
+    <div class="grid__parent">
+        <img src={{ section.settings.image | img_url: 'master'}} class="grid__img">
+        <div class="section__con">
+            <h3 class="grid__title"> {{ section.settings.text-box }} </h3>
+            <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
+        </div>
+    </div>
+    <div class="grid__parent">
+        <div class="grid__fb">
+            <div class="grid__parent">
+                <img src={{ section.settings.image2 | img_url: 'master'}} class="grid__img grid__img--2">
+                
+             </div>
+            <div class="grid__parent">
+                <img src={{ section.settings.image3 | img_url: 'master'}} class="grid__img grid__img--2">
+                <div class="section__con">
+                <h3 class="grid__title grid__title--mini"> {{ section.settings.text-box33 }} </h3>
+                <h3 class="grid__title grid__title--min"> {{ section.settings.text-box3 }} </h3>
+                <a href="{{ section.settings.link3 }}" class="button">{{ section.settings.linktext3 }}</a>
+                </div>
+             </div>
+        </div>
+        <div class="grid__fb">
+            <div class="grid__parent">
+                <img src={{ section.settings.image4 | img_url: 'master'}} class="grid__img grid__img--2">
+                <div class="section__con">
+                <h3 class="grid__title grid__title--mini"> {{ section.settings.text-box44 }} </h3>
+                <h3 class="grid__title grid__title--min"> {{ section.settings.text-box4 }} </h3>
+                <a href="{{ section.settings.link4 }}" class="button">{{ section.settings.linktext4 }}</a>
+                </div>
+            </div>
+            <div class="grid__parent">
+                <img src={{ section.settings.image5 | img_url: 'master'}} class="grid__img grid__img--2">
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% schema %}
+{
+  "name": "Grid",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image 1"
+    },
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image 3"
+    },
+    {
+      "id": "text-box3",
+      "type": "text",
+      "label": "Heading",
+      "default": "Creation Conquered"
+    },
+    {
+      "id": "text-box33",
+      "type": "text",
+      "label": "Heading",
+      "default": "Tagline here 2021"
+    },
+    {
+      "id": "link3",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext3",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "Image 4"
+    },
+    {
+      "id": "text-box4",
+      "type": "text",
+      "label": "Heading",
+      "default": "Creation Conquered"
+    },
+    {
+      "id": "text-box44",
+      "type": "text",
+      "label": "Heading",
+      "default": "Tagline here 2021"
+    },
+    {
+      "id": "link4",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext4",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "image5",
+      "label": "Image 5"
+    }
+  ]
+}
+{% endschema %}
